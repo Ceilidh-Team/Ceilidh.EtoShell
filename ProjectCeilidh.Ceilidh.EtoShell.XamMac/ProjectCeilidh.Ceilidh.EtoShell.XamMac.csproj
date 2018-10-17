@@ -97,6 +97,9 @@
     <PackageReference Include="Eto.Platform.XamMac2">
       <Version>2.4.1</Version>
     </PackageReference>
+    <PackageReference Include="ProjectCeilidh.Cobble">
+      <Version>1.2.2</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

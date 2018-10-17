@@ -25,7 +25,7 @@ namespace ProjectCeilidh.Ceilidh.EtoShell
 
             contextLoader?.Invoke(loadContext);
 
-            loadContext.Execute();
+            await loadContext.ExecuteAsync();
 
             if (!loadContext.TryGetImplementations<IUnitLoader>(out var impl)) return;
 

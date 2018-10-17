@@ -2,7 +2,7 @@
 using ProjectCeilidh.Ceilidh.Standard.Cobble;
 using ProjectCeilidh.Cobble;
 
-namespace ProjectCeilidh.Ceilidh.EtoShell.XamMac
+namespace ProjectCeilidh.Ceilidh.EtoShell.Gtk
 {
     public class ApplicationUnitLoader : IUnitLoader
     {

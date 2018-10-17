@@ -1,6 +1,6 @@
-﻿using System;
-using Eto.Forms;
+﻿using Eto.Forms;
 using ProjectCeilidh.Ceilidh.EtoShell.Cobble;
+using ProjectCeilidh.Ceilidh.EtoShell.Support;
 
 namespace ProjectCeilidh.Ceilidh.EtoShell
 {
@@ -9,7 +9,11 @@ namespace ProjectCeilidh.Ceilidh.EtoShell
     {
         public MainStartUnit(Application app)
         {
-            app.Run(new MainForm());
+            app.GetDispatcher().InvokeAsync(() =>
+            {
+                app.Run(new MainForm());
+                app.GetDispatcher().Shutdown();
+            });
         }
     }
 }

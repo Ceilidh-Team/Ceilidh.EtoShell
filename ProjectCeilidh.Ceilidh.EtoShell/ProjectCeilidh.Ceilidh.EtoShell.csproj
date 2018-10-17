@@ -25,6 +25,5 @@
   
   <ItemGroup>
     <Folder Include="Cobble\" />
-    <Folder Include="Support\" />
   </ItemGroup>
 </Project>
