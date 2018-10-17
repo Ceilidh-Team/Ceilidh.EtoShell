@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectCeilidh.Ceilidh.EtoShell", "ProjectCeilidh.Ceilidh.EtoShell\ProjectCeilidh.Ceilidh.EtoShell.csproj", "{4B0E3290-64A9-4117-BBD7-0FF817B7295C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCeilidh.Ceilidh.EtoShell", "ProjectCeilidh.Ceilidh.EtoShell\ProjectCeilidh.Ceilidh.EtoShell.csproj", "{4B0E3290-64A9-4117-BBD7-0FF817B7295C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectCeilidh.Ceilidh.EtoShell.Gtk", "ProjectCeilidh.Ceilidh.EtoShell.Gtk\ProjectCeilidh.Ceilidh.EtoShell.Gtk.csproj", "{1ECA311F-1D1E-44CB-BE7B-13EB6907C20F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCeilidh.Ceilidh.EtoShell.Gtk", "ProjectCeilidh.Ceilidh.EtoShell.Gtk\ProjectCeilidh.Ceilidh.EtoShell.Gtk.csproj", "{1ECA311F-1D1E-44CB-BE7B-13EB6907C20F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCeilidh.Ceilidh.EtoShell.Wpf", "ProjectCeilidh.Ceilidh.EtoShell.Wpf\ProjectCeilidh.Ceilidh.EtoShell.Wpf.csproj", "{8E317EFB-8BB9-4F41-B1B0-C490FF860FB3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCeilidh.Ceilidh.EtoShell.XamMac", "ProjectCeilidh.Ceilidh.EtoShell.XamMac\ProjectCeilidh.Ceilidh.EtoShell.XamMac.csproj", "{5D5B0DA6-2959-4D0F-8F6A-4048C77F5ABC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectCeilidh.Ceilidh.Standard", "Ceilidh.Standard\ProjectCeilidh.Ceilidh.Standard\ProjectCeilidh.Ceilidh.Standard.csproj", "{D3AF82FD-F4D7-4611-9994-169FE69438E7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectCeilidh.Ceilidh.Standard", "Ceilidh.Standard\ProjectCeilidh.Ceilidh.Standard\ProjectCeilidh.Ceilidh.Standard.csproj", "{D3AF82FD-F4D7-4611-9994-169FE69438E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

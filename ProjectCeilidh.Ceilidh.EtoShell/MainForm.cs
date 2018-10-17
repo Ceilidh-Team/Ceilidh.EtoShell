@@ -29,7 +29,7 @@ namespace ProjectCeilidh.Ceilidh.EtoShell
 	        
 	        using (var abt = new AboutDialog
 	        {
-	            Copyright = "Copyright © 2018 Olivia Trewin",
+	            Copyright = "Copyright 2018 Olivia Trewin",
 	            License = licenseText,
 	            ProgramDescription = "A cross-platform music player / library organizer",
 	            ProgramName = "Ceilidh",

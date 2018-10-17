@@ -21,8 +21,6 @@ namespace ProjectCeilidh.Ceilidh.EtoShell
                         Items =
                         {
                             "Hello there",
-                            new TextBox { Text = "Basic Text" },
-                            new Button { Text = "Button?" }
                         }
                     },
                     null

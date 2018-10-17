@@ -31,6 +31,8 @@
     <LinkMode>None</LinkMode>
     <XamMacArch>
     </XamMacArch>
+    <PackageSigningKey>3rd Party Mac Developer Installer</PackageSigningKey>
+    <AOTMode>None</AOTMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>false</DebugSymbols>
@@ -52,6 +54,8 @@
     <HttpClientHandler>HttpClientHandler</HttpClientHandler>
     <XamMacArch>
     </XamMacArch>
+    <AOTMode>SDK</AOTMode>
+    <EnableSGenConc>true</EnableSGenConc>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
