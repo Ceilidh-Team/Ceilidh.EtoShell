@@ -7,22 +7,27 @@ namespace ProjectCeilidh.Ceilidh.EtoShell
     {
         private void InitializeComponent()
         {
-            Title = "My Eto Form";
-            ClientSize = new Size(400, 350);
+            Title = "Ceilidh";
+            ClientSize = new Size(640, 480);
 
-            Content = new StackLayout
+            Content = new TableLayout
             {
-                Padding = 10,
-                Items =
+                Rows =
                 {
-                    "Hello World!",
-                    // add more controls here
+                    null, new StackLayout
+                    {
+                        Orientation = Orientation.Vertical,
+                        HorizontalContentAlignment = HorizontalAlignment.Center,
+                        Items =
+                        {
+                            "Hello there",
+                            new TextBox { Text = "Basic Text" },
+                            new Button { Text = "Button?" }
+                        }
+                    },
+                    null
                 }
             };
-
-            var quitCommand = new Command { MenuText = "Quit", Shortcut = Application.Instance.CommonModifier | Keys.Q };
-            quitCommand.Executed += (sender, e) => Application.Instance.Quit();
-
 
             // create menu
             Menu = new MenuBar
@@ -30,7 +35,7 @@ namespace ProjectCeilidh.Ceilidh.EtoShell
                 Items =
                 {
                     // File submenu
-                    new ButtonMenuItem { Text = "&File", Items = { AboutCommand }},
+                    new ButtonMenuItem { Text = "&File" },
                     // new ButtonMenuItem { Text = "&Edit", Items = { /* commands/items */ } },
                     // new ButtonMenuItem { Text = "&View", Items = { /* commands/items */ } },
                 },
@@ -39,7 +44,7 @@ namespace ProjectCeilidh.Ceilidh.EtoShell
                     // application (OS X) or file menu (others)
                     new ButtonMenuItem { Text = "&Preferences..." },
                 },
-                QuitItem = quitCommand,
+                QuitItem = QuitCommand,
                 AboutItem = AboutCommand,
             };
         }

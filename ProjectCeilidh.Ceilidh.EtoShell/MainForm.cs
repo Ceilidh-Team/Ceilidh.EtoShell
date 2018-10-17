@@ -17,18 +17,34 @@ namespace ProjectCeilidh.Ceilidh.EtoShell
 
 	    private void About(object sender, EventArgs e)
 	    {
-            using (var licenseStream = typeof(MainForm).Assembly.GetManifestResourceStream("ProjectCeilidh.Ceilidh.EtoShell.LICENSE"))
-            using (var rdr = new StreamReader(licenseStream))
-            using (var abt = new AboutDialog
-            {
-                Copyright = "Copyright © 2018 Olivia Trewin",
-                License = rdr.ReadToEnd(),
-                ProgramDescription = "A cross-platform music player / library organizer",
-                ProgramName = "Ceilidh"
-            })
-                abt.ShowDialog(this);
+	        var licenseText = "X11/MIT";
+	        using (var licenseStream =
+	            typeof(MainForm).Assembly.GetManifestResourceStream("ProjectCeilidh.Ceilidh.EtoShell.LICENSE"))
+	        {
+	            if (licenseStream != null)
+	                using (var rdr = new StreamReader(licenseStream))
+	                    licenseText = rdr.ReadToEnd();
+	        }
+
+	        
+	        using (var abt = new AboutDialog
+	        {
+	            Copyright = "Copyright © 2018 Olivia Trewin",
+	            License = licenseText,
+	            ProgramDescription = "A cross-platform music player / library organizer",
+	            ProgramName = "Ceilidh",
+	            Website = new Uri("https://www.ceilidh.io"),
+	            WebsiteLabel = "Homepage",
+	            Title = "About Ceilidh",
+	            Version = "0.0.0"
+	        })
+	            abt.ShowDialog(this);
 	    }
 
+	    public Command QuitCommand => new Command(Quit) { MenuText = "Quit", Shortcut = Application.Instance.CommonModifier | Keys.Q };
+
+	    private static void Quit(object sender, EventArgs e) => Application.Instance.Quit();
+
 	    #endregion
-    }
+	}
 }
