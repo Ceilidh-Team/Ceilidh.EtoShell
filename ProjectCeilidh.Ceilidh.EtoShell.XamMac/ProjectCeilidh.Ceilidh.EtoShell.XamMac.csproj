@@ -81,11 +81,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="ApplicationUnitLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ProjectCeilidh.Ceilidh.EtoShell\ProjectCeilidh.Ceilidh.EtoShell.csproj">
       <Project>{4B0E3290-64A9-4117-BBD7-0FF817B7295C}</Project>
       <Name>ProjectCeilidh.Ceilidh.EtoShell</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ceilidh.Standard\ProjectCeilidh.Ceilidh.Standard\ProjectCeilidh.Ceilidh.Standard.csproj">
+      <Project>{D3AF82FD-F4D7-4611-9994-169FE69438E7}</Project>
+      <Name>ProjectCeilidh.Ceilidh.Standard</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

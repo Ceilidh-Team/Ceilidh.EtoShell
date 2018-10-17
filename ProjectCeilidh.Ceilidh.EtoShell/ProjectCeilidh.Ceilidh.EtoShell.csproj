@@ -23,4 +23,8 @@
     <ProjectReference Include="..\Ceilidh.Standard\ProjectCeilidh.Ceilidh.Standard\ProjectCeilidh.Ceilidh.Standard.csproj" />
   </ItemGroup>
   
+  <ItemGroup>
+    <Folder Include="Cobble\" />
+    <Folder Include="Support\" />
+  </ItemGroup>
 </Project>

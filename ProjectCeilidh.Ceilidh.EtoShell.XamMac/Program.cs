@@ -1,5 +1,5 @@
-﻿using AppKit;
-using Eto.Forms;
+﻿using Eto.Forms;
+using ProjectCeilidh.Ceilidh.EtoShell.Cobble;
 
 namespace ProjectCeilidh.Ceilidh.EtoShell.XamMac
 {
@@ -7,7 +7,12 @@ namespace ProjectCeilidh.Ceilidh.EtoShell.XamMac
 	{
 		static void Main(string[] args)
 		{
-			new Application(Eto.Platforms.XamMac2).Run(new MainForm());
+            var application = new Application(Eto.Platforms.XamMac2);
+
+            CeilidhLoader.ExecuteCeilidh(ctx =>
+            {
+                ctx.AddUnmanaged(new ApplicationUnitLoader(application));
+            }).Wait();
 		}
 	}
 }
