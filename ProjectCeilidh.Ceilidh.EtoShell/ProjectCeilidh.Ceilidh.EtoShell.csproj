@@ -7,6 +7,7 @@
     <Title>ProjectCeilidh.Ceilidh.EtoShell</Title>
     <Copyright>Copyright © 2018</Copyright>
     <Description>Description of ProjectCeilidh.Ceilidh.EtoShell</Description>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
