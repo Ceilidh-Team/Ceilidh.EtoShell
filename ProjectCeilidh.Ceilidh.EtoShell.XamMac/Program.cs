@@ -1,22 +1,18 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using Eto;
+﻿using Eto;
 using Eto.Forms;
-using ProjectCeilidh.Ceilidh.EtoShell.Support;
+using ProjectCeilidh.Ceilidh.EtoShell.Main;
 
 namespace ProjectCeilidh.Ceilidh.EtoShell.XamMac
 {
-	static class MainClass
+	internal static class MainClass
 	{
 	    public static void Main(string[] args)
 	    {
-            var app = new Application(Platforms.XamMac2);
-            app.AttachDispatcher();
+	        var app = new Application(Platforms.XamMac2);
+	        var context = CeilidhLoader.ExecuteCeilidhAsync().Result;
 
-            ThreadPool.QueueUserWorkItem(_ => CeilidhLoader.ExecuteCeilidh(ctx => ctx.AddUnmanaged(new ApplicationUnitLoader(app))).Wait());
-
-            app.GetDispatcher().Run();
-	    }
+	        if (context.TryGetSingleton(out IEtoStartUnit startUnit))
+	            startUnit.Execute(app);
+        }
     }
 }

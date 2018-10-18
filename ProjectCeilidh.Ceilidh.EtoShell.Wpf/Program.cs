@@ -1,42 +1,20 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Threading;
 using Eto;
 using Eto.Forms;
-using ProjectCeilidh.Ceilidh.EtoShell.Support;
+using ProjectCeilidh.Ceilidh.EtoShell.Main;
 
 namespace ProjectCeilidh.Ceilidh.EtoShell.Wpf
 {
-	class MainClass
+	internal static class MainClass
 	{
-	    private static Application _app;
-
+        [STAThread]
 		public static void Main(string[] args)
 		{
-		    using (var handle = new ManualResetEvent(false))
-		    {
-		        var thread = new Thread(ApplicationThread);
-                thread.SetApartmentState(ApartmentState.STA);
-		        thread.Start(handle);
-		        handle.WaitOne();
-		    }
+		    var app = new Application(Platforms.Wpf);
+		    var context = CeilidhLoader.ExecuteCeilidhAsync().Result;
 
-		    CeilidhLoader.ExecuteCeilidh(ctx =>
-		    {
-		        ctx.AddUnmanaged(new ApplicationUnitLoader(_app));
-		    }).Wait();
+		    if (context.TryGetSingleton(out IEtoStartUnit startUnit))
+		        startUnit.Execute(app);
         }
-
-	    private static void ApplicationThread(object handleObj)
-	    {
-            if (!(handleObj is ManualResetEvent handle)) throw new Exception();
-
-            _app = new Application(Platforms.Wpf);
-	        _app.AttachDispatcher();
-
-	        handle.Set();
-
-            _app.GetDispatcher().Run();
-	    }
 	}
 }
